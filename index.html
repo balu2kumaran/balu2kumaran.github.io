@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Puzzle</title>
+		<link href="style.css" rel="stylesheet"/>
+		<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	</head>
+	<body>
+		<div id="puz-app">
+			<h1>Game</h1>
+			<div class="canvas">
+				
+				<div v-bind:style="stylesT()"></div>
+				<div class="z" v-bind:style="stylesL()"></div><div class="z" v-bind:style="stylesC()"></div><div class="z" v-bind:style="stylesR()"></div>
+				<div v-bind:style="stylesB()"></div>
+
+			</div>
+			<div style="height:20px; width:300px"></div>
+			<div class="controls">
+				<button v-on:click="upclick()">^</button>
+			</div>
+			<div class="controls">
+				<button v-on:click="leftclick()"><</button>
+				<button v-on:click="downclick()">v</button>
+				<button v-on:click="rightclick()">></button>
+			</div>
+		</div>
+		
+		<script src="app.js"></script>
+	</body>
+</html>
